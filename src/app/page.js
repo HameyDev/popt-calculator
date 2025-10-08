@@ -196,7 +196,7 @@ export default function IWICalculator() {
                     : "text-red-700"
                 }`}
               >
-                {`${wall.elevation} ${wall.floor} IWI Area = (${wall.length}×${wall.height}) − (${wall.subtract}) = ${calculateArea(wall).toFixed(2)} m²`}
+                {`${wall.location} ${wall.elevation} ${wall.floor} IWI Area = (${wall.length}×${wall.height}) − (${wall.subtract}) = ${calculateArea(wall).toFixed(2)} m²`}
               </span>
 
               <button
@@ -244,10 +244,10 @@ export default function IWICalculator() {
             className={`${
               wall.insulate === "Yes"
                 ? "text-orange-500 font-semibold"
-                : "text-red-700 font-semibold"
+                : "text-rose-700 font-semibold"
             }`}
           >
-            {`${wall.elevation} ${wall.floor} IWI Area = (${wall.length} × ${wall.height}) − (${wall.subtract}) = ${calculateArea(wall).toFixed(2)} m²`}
+            {`${wall.location} ${wall.elevation} ${wall.floor} IWI Area = (${wall.length} × ${wall.height}) − (${wall.subtract}) = ${calculateArea(wall).toFixed(2)} m²`}
           </p>
         ))}
 
