@@ -221,7 +221,7 @@ export default function IWICalculator() {
       {/* Report Section */}
       <div
         ref={reportRef}
-        className="mt-10 bg-white p-6 rounded shadow overflow-x-auto text-[14px] leading-tight font-[Calibri]"
+        className="mt-10 bg-white p-6 rounded shadow overflow-x-auto text-[16px] leading-tight font-[Calibri]"
       >
         <h1 className="text-xl font-bold text-orange-600 mb-4">IWI</h1>
 
@@ -247,27 +247,27 @@ export default function IWICalculator() {
                 : "text-rose-700 font-semibold"
             }`}
           >
-            {`${wall.location} ${wall.elevation} ${wall.floor} IWI Area = (${wall.length} × ${wall.height}) − (${wall.subtract}) = ${calculateArea(wall).toFixed(2)} m²`}
+            {`${wall.location} ${wall.elevation} ${wall.floor} IWI Area=(${wall.length}×${wall.height})−(${wall.subtract})=${calculateArea(wall).toFixed(2)}m²`}
           </p>
         ))}
 
         <p className="mt-12 font-semibold text-orange-500">IWI</p>
         <p className="mt-4 font-semibold text-orange-500">
-          Total Solid Wall Area = {totals.totalWallArea} m²
+          Total Solid Wall Area={totals.totalWallArea}m²
         </p>
-        <p className="font-semibold text-orange-500">
-          Insulated Solid Wall Area = {totals.insulatedArea} m²
+        <p className="mt-3 font-semibold text-orange-500">
+          Insulated Solid Wall Area = {totals.insulatedArea}m²
         </p>
-        <p className="font-semibold text-orange-500">
-          %age Insulated = {Math.round(totals.percentInsulated)}%
+        <p className="mt-3 font-semibold text-orange-500">
+          %age Insulated={Math.round(totals.percentInsulated)}%
         </p>
-        <p className="font-semibold text-orange-500">
+        <p className="mt-3 font-semibold text-orange-500">
           Popt = {Math.round(totals.percentInsulated)}%
         </p>
-        <p className="font-semibold text-orange-500">
-          Measure Installed = {Math.round(totals.percentInsulated)}%
+        <p className="mt-3 font-semibold text-orange-500">
+          Measure Installed={Math.round(totals.percentInsulated)}%
         </p>
-        <p className="font-semibold text-orange-500">Solid Wall = 100%</p>
+        <p className="mt-3 font-semibold text-orange-500">Solid Wall=100%</p>
 
         <h4 className="mt-4 font-bold text-rose-700">Notes:</h4>
         <ul className="text-rose-700 text-sm font-bold list-disc ml-5">
