@@ -221,7 +221,7 @@ export default function IWICalculator() {
       {/* Report Section */}
       <div
         ref={reportRef}
-        className="mt-10 bg-white p-6 rounded shadow overflow-x-auto text-[10px] leading-tight font-[Calibri]"
+        className="mt-10 bg-white p-6 rounded shadow overflow-x-auto text-[10px] leading-tight font-[Calibri] w-1/2"
       >
         <h1 className="text-xl font-bold text-orange-600 mb-4">IWI</h1>
 
