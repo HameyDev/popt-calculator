@@ -221,7 +221,7 @@ export default function IWICalculator() {
       {/* Report Section */}
       <div
         ref={reportRef}
-        className="mt-10 bg-white p-6 rounded shadow overflow-x-auto text-[16px] leading-tight font-[Calibri]"
+        className="mt-10 bg-white p-6 rounded shadow overflow-x-auto text-[10px] leading-tight font-[Calibri]"
       >
         <h1 className="text-xl font-bold text-orange-600 mb-4">IWI</h1>
 
@@ -247,7 +247,7 @@ export default function IWICalculator() {
                 : "text-rose-700 font-semibold"
             }`}
           >
-            {`${wall.location} ${wall.elevation} ${wall.floor} IWI Area=(${wall.length}×${wall.height})−(${wall.subtract})=${calculateArea(wall).toFixed(2)}m²`}
+            {`${wall.location} ${wall.elevation} ${wall.floor} IWI Area=(${wall.length}*${wall.height})−(${wall.subtract})=${calculateArea(wall).toFixed(2)}m²`}
           </p>
         ))}
 
