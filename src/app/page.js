@@ -247,7 +247,7 @@ export default function IWICalculator() {
                 : "text-rose-700 font-semibold"
             }`}
           >
-            {`${wall.location} ${wall.elevation} ${wall.floor} IWI Area=(${wall.length}*${wall.height})-(${wall.subtract})=${calculateArea(wall).toFixed(2)}m²`}
+            {`{${wall.location} === "Main" ? "" : ${wall.location}} ${wall.elevation} ${wall.floor} IWI Area=(${wall.length}*${wall.height})-(${wall.subtract})=${calculateArea(wall).toFixed(2)}m²`}
           </p>
         ))}
 
