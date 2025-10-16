@@ -275,7 +275,7 @@ export default function IWICalculator() {
         <p className="mt-4 font-semibold text-orange-500">
           Total Solid Wall Area={totals.totalWallArea - totals.cavityArea}m²
         </p>
-        {totals.cavityArea !== 0 && (
+        {totals.cavityArea > 0 && (
          <p className="mt-4 font-semibold text-orange-500">
            Total Cavity Wall Area = {totals.cavityArea}m²
          </p>
@@ -292,9 +292,9 @@ export default function IWICalculator() {
         <p className="mt-3 font-semibold text-orange-500">
           Measure Installed={Math.round(totals.percentInsulated)}%
         </p>
-        <p className="mt-3 font-semibold text-orange-500">Solid Wall={Math.round((totals.totalWallArea/(totals.totalWallArea-totals.cavityArea))*100)}%</p>
-        {totals.cavityArea !== 0 && (
-        <p className="mt-3 font-semibold text-orange-500">Cavity Wall={Math.round((totals.totalWallArea/totals.cavityArea)*100)}%</p>
+        <p className="mt-3 font-semibold text-orange-500">Solid Wall={Math.round(((totals.totalWallArea - totals.cavityArea) / totals.totalWallArea) * 100)}%</p>
+        {totals.cavityArea > 0 && (
+        <p className="mt-3 font-semibold text-orange-500">Cavity Wall={Math.round((totals.cavityArea / totals.totalWallArea) * 100)}%</p>
         )}
         <h4 className="text-[10px] leading-tight font-[Calibri] mt-4 font-bold text-rose-700">Notes:</h4>
         <ul className="text-[10px] leading-tight font-[Calibri] text-rose-700 font-bold list-disc ml-5">
