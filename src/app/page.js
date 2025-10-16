@@ -270,7 +270,7 @@ export default function IWICalculator() {
         <p className="mt-3 font-semibold text-orange-500">Solid Wall=100%</p>
 
         <h4 className="text-[10px] leading-tight font-[Calibri] mt-4 font-bold text-rose-700">Notes:</h4>
-        <ul className="text-[10px] leading-tight font-[Calibri] text-rose-700 text-sm font-bold list-disc ml-5">
+        <ul className="text-[10px] leading-tight font-[Calibri] text-rose-700 font-bold list-disc ml-5">
           <li>Wet rooms are not to be insulated.</li>
           <li>DMEV fan will be installed in Kitchen and Bathroom.</li>
           <li>
