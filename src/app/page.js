@@ -12,12 +12,14 @@ export default function IWICalculator() {
       height: "",
       subtract: "",
       insulate: "Yes",
+      cavity: "No",
     }))
   );
 
   const [totals, setTotals] = useState({
     totalWallArea: 0.0,
     insulatedArea: 0.0,
+    cavityArea: 0.0,
     percentInsulated: 0.0,
   });
 
@@ -33,17 +35,20 @@ export default function IWICalculator() {
   useEffect(() => {
     let total = 0;
     let insulated = 0;
+    let cavity = 0;
 
     walls.forEach((wall) => {
       const area = calculateArea(wall);
       total += area;
       if (wall.insulate === "Yes") insulated += area;
+      if (wall.cavity === "Yes") cavity += area;
     });
 
     const percent = total ? ((insulated / total) * 100).toFixed(2) : 0;
     setTotals({
       totalWallArea: total.toFixed(2),
       insulatedArea: insulated.toFixed(2),
+      cavityArea: cavity.toFixed(2),
       percentInsulated: percent,
     });
   }, [walls]);
@@ -65,6 +70,7 @@ export default function IWICalculator() {
         height: "",
         subtract: "",
         insulate: "Yes",
+        cavity: "No",
       },
     ]);
   };
@@ -101,6 +107,7 @@ export default function IWICalculator() {
           <span>Ceiling Height (m)</span>
           <span>Subtract Area (m²)</span>
           <span>Insulate</span>
+          <span>Cavity</span>
           <span>Total Wall Area</span>
           <span>Action</span>
         </div>
@@ -189,6 +196,16 @@ export default function IWICalculator() {
                 <option>No</option>
               </select>
 
+              {/* 🆕 Cavity Option */}
+              <select
+                value={wall.cavity}
+                onChange={(e) => handleChange(index, "cavity", e.target.value)}
+                className="border p-1 rounded"
+              >
+                <option>No</option>
+                <option>Yes</option>
+              </select>
+
               <span
                 className={`font-semibold ${
                   wall.insulate === "Yes"
@@ -255,6 +272,11 @@ export default function IWICalculator() {
         <p className="mt-4 font-semibold text-orange-500">
           Total Solid Wall Area={totals.totalWallArea}m²
         </p>
+        {totals.cavityArea !== 0 && (
+         <p className="font-semibold text-orange-500">
+           Total Cavity Wall Area = {totals.cavityArea}m²
+         </p>
+        )}
         <p className="mt-3 font-semibold text-orange-500">
           Insulated Solid Wall Area={totals.insulatedArea}m²
         </p>
