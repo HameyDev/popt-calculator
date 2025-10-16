@@ -61,9 +61,9 @@ export default function IWICalculator() {
         location: "Main",
         elevation: "Front",
         floor: "GF",
-        length: 0.0,
-        height: 0.0,
-        subtract: 0.0,
+        length: "",
+        height: "",
+        subtract: "",
         insulate: "Yes",
       },
     ]);
@@ -269,8 +269,8 @@ export default function IWICalculator() {
         </p>
         <p className="mt-3 font-semibold text-orange-500">Solid Wall=100%</p>
 
-        <h4 className="mt-4 font-bold text-rose-700">Notes:</h4>
-        <ul className="text-rose-700 text-sm font-bold list-disc ml-5">
+        <h4 className="text-[10px] mt-4 font-bold text-rose-700">Notes:</h4>
+        <ul className="text-[10px] text-rose-700 text-sm font-bold list-disc ml-5">
           <li>Wet rooms are not to be insulated.</li>
           <li>DMEV fan will be installed in Kitchen and Bathroom.</li>
           <li>
