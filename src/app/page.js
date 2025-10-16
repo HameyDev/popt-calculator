@@ -281,7 +281,7 @@ export default function IWICalculator() {
          </p>
         )}
         <p className="mt-3 font-semibold text-orange-500">
-          Insulated Solid Wall Area={totals.insulatedArea}m²
+          Insulated Solid Wall Area={Math.round(totals.insulatedArea)}m²
         </p>
         <p className="mt-3 font-semibold text-orange-500">
           %age Insulated={Math.round(totals.percentInsulated)}%
