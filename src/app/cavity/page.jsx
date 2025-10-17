@@ -93,7 +93,7 @@ export default function CWICalculator() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-gray to-green-100 p-4 sm:p-8 pt-20 sm:pt-28 font-sans">
       <h1 className="text-3xl font-extrabold text-center text-green-600 mb-6 drop-shadow">
-        🏕️ Cavity POPT Calculator
+        🏕️ CWI POPT Calculator
       </h1>
 
       {/* Responsive Table Wrapper */}
