@@ -99,7 +99,7 @@ export default function IWICalculator() {
       {/* Responsive Table Wrapper */}
       <div className="overflow-x-auto">
         {/* Table Header */}
-        <div className="min-w-[900px] grid grid-cols-9 gap-2 font-semibold bg-gray-200 p-2 rounded">
+        <div className="min-w-[900px] grid grid-cols-10 gap-2 font-semibold bg-gray-200 p-2 rounded">
           <span>Location</span>
           <span>Elevation</span>
           <span>Floor</span>
@@ -218,9 +218,9 @@ export default function IWICalculator() {
 
               <button
                 onClick={() => removeWall(index)}
-                className="w-3 px-1 py-1 bg-red-600 text-white rounded hover:bg-red-700"
+                className="px-2 px-1 py-1 bg-red-600 text-white rounded hover:bg-red-700"
               >
-                X
+                Remove
               </button>
             </div>
           );
