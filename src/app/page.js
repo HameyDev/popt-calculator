@@ -118,7 +118,7 @@ export default function IWICalculator() {
           return (
             <div
               key={index}
-              className="min-w-[900px] grid grid-cols-9 gap-2 items-center border-b py-2"
+              className="min-w-[900px] grid grid-cols-10 gap-2 items-center border-b py-2"
             >
               <select
                 value={wall.location}
