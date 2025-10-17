@@ -218,7 +218,7 @@ export default function IWICalculator() {
 
               <button
                 onClick={() => removeWall(index)}
-                className="px-3 py-1 bg-red-600 text-white rounded hover:bg-red-700"
+                className="w-3 px-1 py-1 bg-red-600 text-white rounded hover:bg-red-700"
               >
                 X
               </button>
