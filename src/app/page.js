@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function HomePage() {
   return (
-    <div className="relative text-center px-6 pt-48 overflow-hidden">
+    <div className="relative flex flex-col items-center text-center px-6 pt-48 overflow-hidden">
       {/* 🌆 Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
@@ -23,7 +23,7 @@ export default function HomePage() {
       />
 
       {/* 🌟 Hero Section */}
-      <div className="relative flex items-center justify-center z-10 max-w-4xl text-gray-800 animate-fadeIn mt-10">
+      <div className="relative flex flex-col items-center justify-center z-10 max-w-4xl text-gray-800 animate-fadeIn mt-10">
         <h1 className="text-6xl md:text-7xl font-extrabold mb-10 leading-tight">
           Welcome to{" "}
           <span className="text-orange-600 drop-shadow-[0_0_10px_rgba(255,140,0,0.3)]">
