@@ -23,7 +23,7 @@ export default function HomePage() {
       />
 
       {/* 🌟 Hero Section */}
-      <div className="relative z-10 max-w-4xl text-gray-800 animate-fadeIn mt-10">
+      <div className="relative flex items-center justify-center z-10 max-w-4xl text-gray-800 animate-fadeIn mt-10">
         <h1 className="text-6xl md:text-7xl font-extrabold mb-10 leading-tight">
           Welcome to{" "}
           <span className="text-orange-600 drop-shadow-[0_0_10px_rgba(255,140,0,0.3)]">
