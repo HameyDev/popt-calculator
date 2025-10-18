@@ -218,7 +218,7 @@ export default function EWICalculator() {
 
               <button
                 onClick={() => removeWall(index)}
-                className="px-2 px-1 py-1 bg-purple-600 text-white rounded hover:bg-red-700"
+                className="px-2 px-1 py-1 bg-purple-600 text-white rounded hover:bg-purple-700"
               >
                 Remove
               </button>
