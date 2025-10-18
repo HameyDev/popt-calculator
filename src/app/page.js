@@ -40,47 +40,48 @@ export default function HomePage() {
         </p>
       </div>
 
-{/* Simple attractive cards */}
-<div className="relative z-10 grid gap-6 mt-6 max-w-5xl w-full px-6 sm:grid-cols-3">
+      {/* Simple attractive cards */}
+<div className="relative z-10 grid gap-6 mt-6 max-w-5xl w-full px-6 sm:grid-cols-3 font-sans">
   {/* IWI */}
-  <div className="group bg-white rounded-2xl shadow-md hover:shadow-xl transition p-6 font-['Poppins',ui-sans-serif]">
+  <div className="group bg-white rounded-2xl shadow-md hover:shadow-xl transition p-6">
     <div className="flex items-center justify-between">
       <h3 className="text-xl font-extrabold text-orange-600 tracking-tight">IWI</h3>
       <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center">
         <span className="text-orange-700 font-bold">I</span>
       </div>
     </div>
-    <p className="mt-3 text-sm text-gray-600 leading-relaxed">
-      Internal Wall Insulation — quickly draw insulated walls and get instant area calculations and a neat report.
+    <p className="mt-3 text-sm text-gray-600 leading-relaxed font-medium">
+      Internal Wall Insulation — quickly draw insulated walls and get instant area calculations.
     </p>
   </div>
 
   {/* EWI */}
-  <div className="group bg-white rounded-2xl shadow-md hover:shadow-xl transition p-6 font-[Inter]">
+  <div className="group bg-white rounded-2xl shadow-md hover:shadow-xl transition p-6">
     <div className="flex items-center justify-between">
       <h3 className="text-xl font-extrabold text-purple-600 tracking-tight">EWI</h3>
       <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center">
         <span className="text-purple-700 font-bold">E</span>
       </div>
     </div>
-    <p className="mt-3 text-sm text-gray-600 leading-relaxed">
-      External Wall Insulation — plan exterior insulation, visualize coverage and export annotated floorplans.
+    <p className="mt-3 text-sm text-gray-600 leading-relaxed font-medium">
+      External Wall Insulation — plan exterior insulation and export annotated floorplans.
     </p>
   </div>
 
   {/* CWI */}
-  <div className="group bg-white rounded-2xl shadow-md hover:shadow-xl transition p-6 font-[Inter]">
+  <div className="group bg-white rounded-2xl shadow-md hover:shadow-xl transition p-6">
     <div className="flex items-center justify-between">
       <h3 className="text-xl font-extrabold text-emerald-600 tracking-tight">CWI</h3>
       <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-emerald-100 to-emerald-200 flex items-center justify-center">
         <span className="text-emerald-700 font-bold">C</span>
       </div>
     </div>
-    <p className="mt-3 text-sm text-gray-600 leading-relaxed">
-      Cavity Wall Insulation — analyze cavity areas, compare to solid wall options and produce clean reports.
+    <p className="mt-3 text-sm text-gray-600 leading-relaxed font-medium">
+      Cavity Wall Insulation — analyze cavity areas and produce clean reports.
     </p>
   </div>
 </div>
+
 
 
 
