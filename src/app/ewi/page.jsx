@@ -284,13 +284,13 @@ export default function EWICalculator() {
           Insulated EWI Solid Wall Area={totals.insulatedArea}m²
         </p>
         <p className="mt-3 font-semibold text-purple-500">
-          %age Insulated={totals.percentInsulated}%
+          %age Insulated={Math.floor(totals.percentInsulated)}%
         </p>
         <p className="mt-3 font-semibold text-purple-500">
-          Popt={totals.percentInsulated}%
+          Popt={Math.floor(totals.percentInsulated)}%
         </p>
         <p className="mt-3 font-semibold text-purple-500">
-          Measure Installed={totals.percentInsulated}%
+          Measure Installed={Math.floor(totals.percentInsulated)}%
         </p>
         <p className="mt-3 font-semibold text-purple-500">Solid Wall={totals.totalWallArea > 0 ? Math.round(((totals.totalWallArea - totals.cavityArea) / totals.totalWallArea) * 100): 0}%</p>
         {totals.cavityArea > 0 && (
