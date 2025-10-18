@@ -280,7 +280,7 @@ export default function EWICalculator() {
            Total Cavity Wall Area={totals.cavityArea}m²
          </p>
         )}
-        <p className="mt-3 font-semibold text-purple-500 border-2 border-purple-500 px-2 py-1 w-48">
+        <p className="mt-3 font-semibold text-purple-500 border-2 border-purple-500 px-2 pb-3 w-48">
           Insulated EWI Solid Wall Area={totals.insulatedArea}m²
         </p>
         <p className="mt-3 font-semibold text-purple-500">
