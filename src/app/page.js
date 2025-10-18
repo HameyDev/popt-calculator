@@ -43,7 +43,7 @@ export default function HomePage() {
 {/* Simple attractive cards */}
 <div className="relative z-10 grid gap-6 mt-6 max-w-5xl w-full px-6 sm:grid-cols-3">
   {/* IWI */}
-  <div className="group bg-white rounded-2xl shadow-md hover:shadow-xl transition p-6 font-[Inter]">
+  <div className="group bg-white rounded-2xl shadow-md hover:shadow-xl transition p-6 font-['Poppins',ui-sans-serif]">
     <div className="flex items-center justify-between">
       <h3 className="text-xl font-extrabold text-orange-600 tracking-tight">IWI</h3>
       <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center">
