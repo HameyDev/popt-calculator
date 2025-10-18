@@ -44,7 +44,7 @@ export default function HomePage() {
 <div className="relative z-10 grid gap-6 mt-6 max-w-5xl w-full px-6 sm:grid-cols-3 font-sans">
   {/* IWI */}
   <div className="group bg-white rounded-2xl shadow-md hover:shadow-xl transition p-6">
-    <div className="flex items-center justify-between">
+    <div className="flex items-center justify-center">
       <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center">
         <span className="text-orange-700 font-bold">IWI</span>
       </div>
@@ -56,7 +56,7 @@ export default function HomePage() {
 
   {/* EWI */}
   <div className="group bg-white rounded-2xl shadow-md hover:shadow-xl transition p-6">
-    <div className="flex items-center justify-between">
+    <div className="flex items-center justify-center">
       <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center">
         <span className="text-purple-700 font-bold">EWI</span>
       </div>
@@ -68,7 +68,7 @@ export default function HomePage() {
 
   {/* CWI */}
   <div className="group bg-white rounded-2xl shadow-md hover:shadow-xl transition p-6">
-    <div className="flex items-center justify-between">
+    <div className="flex items-center justify-center">
       <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-emerald-100 to-emerald-200 flex items-center justify-center">
         <span className="text-emerald-700 font-bold">CWI</span>
       </div>
