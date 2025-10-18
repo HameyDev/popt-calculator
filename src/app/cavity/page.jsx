@@ -283,13 +283,13 @@ export default function CWICalculator() {
           Insulated CWI Wall Area={totals.insulatedArea}m²
         </p>
         <p className="mt-3 font-semibold text-green-500">
-          %age Insulated={totals.percentInsulated}%
+          %age Insulated={Math.floor(totals.percentInsulated)}%
         </p>
         <p className="mt-3 font-semibold text-green-500">
-          Popt={totals.percentInsulated}%
+          Popt={Math.floor(totals.percentInsulated)}%
         </p>
         <p className="mt-3 font-semibold text-green-500">
-          Measure Installed={totals.percentInsulated}%
+          Measure Installed={Math.floor(totals.percentInsulated)}%
         </p>
         <p className="mt-3 font-semibold text-green-500">Cavity Wall={totals.totalWallArea > 0 ? Math.round(((totals.totalWallArea - totals.solidArea) / totals.totalWallArea) * 100): 0}%</p>
         {totals.cavityArea > 0 && (
