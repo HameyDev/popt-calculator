@@ -292,7 +292,7 @@ export default function IWICalculator() {
         <p className="mt-3 font-semibold text-orange-500">
           Measure Installed={Math.round(totals.percentInsulated)}%
         </p>
-        <p className="mt-3 font-semibold text-purple-500">Solid Wall={totals.totalWallArea > 0 ? Math.round(((totals.totalWallArea - totals.cavityArea) / totals.totalWallArea) * 100): 0}%</p>
+        <p className="mt-3 font-semibold text-orange-500">Solid Wall={totals.totalWallArea > 0 ? Math.round(((totals.totalWallArea - totals.cavityArea) / totals.totalWallArea) * 100): 0}%</p>
         {totals.cavityArea > 0 && (
         <p className="mt-3 font-semibold text-orange-500">Cavity Wall={Math.round((totals.cavityArea / totals.totalWallArea) * 100)}%</p>
         )}
