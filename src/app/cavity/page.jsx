@@ -291,7 +291,7 @@ export default function CWICalculator() {
         <p className="mt-3 font-semibold text-green-500">
           Measure Installed={Math.round(totals.percentInsulated)}%
         </p>
-        <p className="mt-3 font-semibold text-green-500">Cavity Wall={Math.round(((totals.totalWallArea - totals.solidArea) / totals.totalWallArea) * 100)}%</p>
+        <p className="mt-3 font-semibold text-purple-500">Cavity Wall={totals.totalWallArea > 0 ? Math.round(((totals.totalWallArea - totals.solidArea) / totals.totalWallArea) * 100): 0}%</p>
         {totals.cavityArea > 0 && (
         <p className="mt-3 font-semibold text-green-500">Solid Wall={Math.round((totals.solidArea / totals.totalWallArea) * 100)}%</p>
         )}
