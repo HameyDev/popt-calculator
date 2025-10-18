@@ -279,7 +279,7 @@ export default function CWICalculator() {
            Total Solid Wall Area={totals.solidArea}m²
          </p>
         )}
-        <p className="mt-3 font-semibold text-green-500 border-2 border-green-500 px-2 py-1 w-40">
+        <p className="mt-3 font-semibold text-green-500 border-2 border-green-500 px-2 py-1 w-48">
           Insulated CWI Wall Area={totals.insulatedArea}m²
         </p>
         <p className="mt-3 font-semibold text-green-500">
