@@ -12,7 +12,7 @@ export default function Navbar() {
     { href: "/", label: "HOME" },
     { href: "/iwi", label: "IWI POPT" },
     { href: "/ewi", label: "EWI POPT" },
-    { href: "/cavity", label: "CAVITY POPT" },
+    { href: "/cavity", label: "CWI POPT" },
   ];
 
   return (
