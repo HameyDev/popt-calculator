@@ -45,9 +45,8 @@ export default function HomePage() {
   {/* IWI */}
   <div className="group bg-white rounded-2xl shadow-md hover:shadow-xl transition p-6">
     <div className="flex items-center justify-between">
-      <h3 className="text-xl font-extrabold text-orange-600 tracking-tight">IWI</h3>
       <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center">
-        <span className="text-orange-700 font-bold">I</span>
+        <span className="text-orange-700 font-bold">IWI</span>
       </div>
     </div>
     <p className="mt-3 text-sm text-gray-600 leading-relaxed font-medium">
@@ -58,9 +57,8 @@ export default function HomePage() {
   {/* EWI */}
   <div className="group bg-white rounded-2xl shadow-md hover:shadow-xl transition p-6">
     <div className="flex items-center justify-between">
-      <h3 className="text-xl font-extrabold text-purple-600 tracking-tight">EWI</h3>
       <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-100 to-purple-200 flex items-center justify-center">
-        <span className="text-purple-700 font-bold">E</span>
+        <span className="text-purple-700 font-bold">EWI</span>
       </div>
     </div>
     <p className="mt-3 text-sm text-gray-600 leading-relaxed font-medium">
@@ -71,9 +69,8 @@ export default function HomePage() {
   {/* CWI */}
   <div className="group bg-white rounded-2xl shadow-md hover:shadow-xl transition p-6">
     <div className="flex items-center justify-between">
-      <h3 className="text-xl font-extrabold text-emerald-600 tracking-tight">CWI</h3>
       <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-emerald-100 to-emerald-200 flex items-center justify-center">
-        <span className="text-emerald-700 font-bold">C</span>
+        <span className="text-emerald-700 font-bold">CWI</span>
       </div>
     </div>
     <p className="mt-3 text-sm text-gray-600 leading-relaxed font-medium">
