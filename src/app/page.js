@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function HomePage() {
   return (
-    <div className="relative flex flex-col items-center justify-center text-center px-6 pt-28 overflow-hidden">
+    <div className="relative flex items-center justify-center text-center px-6 pt-48 overflow-hidden">
       {/* 🌆 Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
