@@ -270,10 +270,10 @@ export default function IWICalculator() {
 
         <p className="mt-12 font-semibold text-orange-500">IWI</p>
         <p className="mt-4 font-semibold text-orange-500">
-          Total IWI Wall Area={totals.totalWallArea}m²
+          Total Wall Area={totals.totalWallArea}m²
         </p>
         <p className="mt-4 font-semibold text-orange-500">
-          Total IWI Solid Wall Area={(totals.totalWallArea - totals.cavityArea).toFixed(2)}m²
+          Total Solid Wall Area={(totals.totalWallArea - totals.cavityArea).toFixed(2)}m²
         </p>
         {totals.cavityArea > 0 && (
          <p className="mt-4 font-semibold text-orange-500">
