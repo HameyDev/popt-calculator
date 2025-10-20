@@ -71,10 +71,10 @@ export default function Navbar() {
             onClick={() => setOpen((s) => !s)}
             aria-expanded={open}
             aria-controls="mobile-menu"
-            className="md:hidden inline-flex items-center justify-center p-2 rounded-md bg-white/8 hover:bg-white/12 focus:outline-none focus:ring-2 focus:ring-orange-300/40"
+            className="md:hidden inline-flex text-black items-center justify-center p-2 rounded-md bg-white/8 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-emerald-300/40"
             title="Toggle menu"
           >
-            <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <svg className="w-5 h-5 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor">
               {open ? (
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
               ) : (
