@@ -102,7 +102,7 @@ export default function Navbar() {
                 href={l.href}
                 onClick={() => setOpen(false)}
                 className={`px-4 py-3 rounded-md text-left transition
-                  ${active ? "text-orange-300 font-semibold bg-white/8" : "text-gray-200 hover:bg-white/6"}`}
+                  ${active ? "text-emerald-300 font-semibold bg-bg-emerald" : "text-black hover:bg-emerald-400"}`}
               >
                 {l.label}
               </Link>
@@ -111,7 +111,7 @@ export default function Navbar() {
           <div className="px-4 py-3">
             <a
               href="#"
-              className="block text-sm text-gray-300 hover:text-white transition"
+              className="block text-sm text-black hover:text-emerald-400 transition"
             >
               Need help?
             </a>
