@@ -88,7 +88,7 @@ export default function Navbar() {
       {/* Mobile menu (centered panel) */}
       <div
         id="mobile-menu"
-        className={`fixed top-20 left-1/2 transform -translate-x-1/2 z-40 w-[90%] max-w-sm
+        className={`fixed top-20 left-1/2 text-black transform -translate-x-1/2 z-40 w-[90%] max-w-sm
                     bg-white/6 backdrop-blur-md border border-white/10 rounded-xl shadow-lg
                     transition-all duration-200 overflow-hidden ${open ? "opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none"}`}
         aria-hidden={!open}
