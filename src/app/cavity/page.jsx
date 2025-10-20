@@ -291,9 +291,9 @@ export default function CWICalculator() {
         <p className="mt-3 font-semibold text-green-500">
           Measure Installed={Math.floor(totals.percentInsulated)}%
         </p>
-        <p className="mt-3 font-semibold text-green-500">Cavity Wall={totals.totalWallArea > 0 ? Math.ceil(((totals.totalWallArea - totals.solidArea) / totals.totalWallArea) * 100): 0}%</p>
+        <p className="mt-3 font-semibold text-green-500">Cavity Wall={totals.totalWallArea > 0 ? Math.floor(((totals.totalWallArea - totals.solidArea) / totals.totalWallArea) * 100): 0}%</p>
         {totals.solidArea > 0 && (
-        <p className="mt-3 font-semibold text-green-500">Solid Wall={Math.ceil((totals.solidArea / totals.totalWallArea) * 100)}%</p>
+        <p className="mt-3 font-semibold text-green-500">Solid Wall={Math.floor((totals.solidArea / totals.totalWallArea) * 100)}%</p>
         )}
       </div>
 
