@@ -268,7 +268,7 @@ export default function EWICalculator() {
           </p>
         ))}
 
-        <p className="mt-12 font-semibold text-purple-500">IWI</p>
+        <p className="mt-12 font-semibold text-purple-500">EWI</p>
         <p className="mt-4 font-semibold text-purple-500">
           Total Wall Area={totals.totalWallArea}m²
         </p>
