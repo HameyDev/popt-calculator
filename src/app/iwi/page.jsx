@@ -38,7 +38,7 @@ export default function IWICalculator() {
     let cavity = 0;
 
     walls.forEach((wall) => {
-      const area = calculateArea(wall);
+      const area = Number(calculateArea(wall).toFixed(2));
       total += area;
       if (wall.insulate === "Yes") insulated += area;
       if (wall.cavity === "Yes") cavity += area;
