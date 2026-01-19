@@ -31,7 +31,7 @@ export default function IWICalculator() {
     const subtract = Math.round((parseFloat(wall.subtract) || 0) * 100);
 
     const areaInCm =
-      Math.round((length * height) / 100) - subtract;
+      ((length * height) / 100) - subtract;
 
     return areaInCm > 0 ? areaInCm / 100 : 0;
   };
