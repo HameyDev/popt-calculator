@@ -26,41 +26,41 @@ export default function IWICalculator() {
   const reportRef = useRef();
 
   const calculateArea = (wall) => {
-  const length = Math.round((parseFloat(wall.length) || 0) * 100);
-  const height = Math.round((parseFloat(wall.height) || 0) * 100);
-  const subtract = Math.round((parseFloat(wall.subtract) || 0) * 100);
+    const length = Math.round((parseFloat(wall.length) || 0) * 100);
+    const height = Math.round((parseFloat(wall.height) || 0) * 100);
+    const subtract = Math.round((parseFloat(wall.subtract) || 0) * 100);
 
-  const areaInCm =
-    Math.round((length * height) / 100) - subtract;
+    const areaInCm =
+      Math.round((length * height) / 100) - subtract;
 
-  return areaInCm > 0 ? areaInCm / 100 : 0;
+    return areaInCm > 0 ? areaInCm / 100 : 0;
   };
 
 
   useEffect(() => {
-  let total = 0;
-  let insulated = 0;
-  let cavity = 0;
+    let total = 0;
+    let insulated = 0;
+    let cavity = 0;
 
-  walls.forEach((wall) => {
-    const area = Number(calculateArea(wall).toFixed(2));
-    total += area;
+    walls.forEach((wall) => {
+      const area = Number(calculateArea(wall).toFixed(2));
+      total += area;
 
-    if (wall.insulate === "Yes") insulated += area;
-    if (wall.cavity === "Yes") cavity += area;
-  });
+      if (wall.insulate === "Yes") insulated += area;
+      if (wall.cavity === "Yes") cavity += area;
+    });
 
-  const percent = total
-    ? Number(((insulated / total) * 100).toFixed(2))
-    : 0;
+    const percent = total
+      ? Number(((insulated / total) * 100).toFixed(2))
+      : 0;
 
-  setTotals({
-    totalWallArea: total.toFixed(2),
-    insulatedArea: insulated.toFixed(2),
-    cavityArea: cavity.toFixed(2),
-    percentInsulated: percent,
-  });
-}, [walls]);
+    setTotals({
+      totalWallArea: total.toFixed(2),
+      insulatedArea: insulated.toFixed(2),
+      cavityArea: cavity.toFixed(2),
+      percentInsulated: percent,
+    });
+  }, [walls]);
 
 
   const handleChange = (index, field, value) => {
@@ -217,11 +217,10 @@ export default function IWICalculator() {
               </select>
 
               <span
-                className={`font-semibold ${
-                  wall.insulate === "Yes"
+                className={`font-semibold ${wall.insulate === "Yes"
                     ? "text-orange-500"
                     : "text-red-700"
-                }`}
+                  }`}
               >
                 {`${wall.location} ${wall.elevation} ${wall.floor} IWI Area=(${wall.length}*${wall.height})-(${wall.subtract})=${calculateArea(wall).toFixed(2)}m²`}
               </span>
@@ -268,11 +267,10 @@ export default function IWICalculator() {
         {walls.map((wall, index) => (
           <p
             key={index}
-            className={`${
-              wall.insulate === "Yes"
+            className={`${wall.insulate === "Yes"
                 ? "text-orange-500 font-semibold"
                 : "text-rose-700 font-semibold"
-            }`}
+              }`}
           >
             {`${wall.location === "Main" ? "" : wall.location + " "} ${wall.elevation} ${wall.floor} IWI Area=(${wall.length}*${wall.height})-(${wall.subtract})=${calculateArea(wall).toFixed(2)}m²`}
           </p>
@@ -286,9 +284,9 @@ export default function IWICalculator() {
           Total Solid Wall Area={(totals.totalWallArea - totals.cavityArea).toFixed(2)}m²
         </p>
         {totals.cavityArea > 0 && (
-         <p className="mt-4 font-semibold text-orange-500">
-           Total Cavity Wall Area={totals.cavityArea}m²
-         </p>
+          <p className="mt-4 font-semibold text-orange-500">
+            Total Cavity Wall Area={totals.cavityArea}m²
+          </p>
         )}
         <p className="mt-3 font-semibold text-orange-500 border-2 border-orange-500 px-2 pb-3 w-48">
           Insulated IWI Solid Wall Area={totals.insulatedArea}m²
@@ -302,9 +300,9 @@ export default function IWICalculator() {
         <p className="mt-3 font-semibold text-orange-500">
           Measure Installed={Math.floor(totals.percentInsulated)}%
         </p>
-        <p className="mt-3 font-semibold text-orange-500">Solid Wall={totals.totalWallArea > 0 ? Math.floor(((totals.totalWallArea - totals.cavityArea) / totals.totalWallArea) * 100): 0}%</p>
+        <p className="mt-3 font-semibold text-orange-500">Solid Wall={totals.totalWallArea > 0 ? Math.floor(((totals.totalWallArea - totals.cavityArea) / totals.totalWallArea) * 100) : 0}%</p>
         {totals.cavityArea > 0 && (
-        <p className="mt-3 font-semibold text-orange-500">Cavity Wall={Math.floor((totals.cavityArea / totals.totalWallArea) * 100)}%</p>
+          <p className="mt-3 font-semibold text-orange-500">Cavity Wall={Math.floor((totals.cavityArea / totals.totalWallArea) * 100)}%</p>
         )}
         <h4 className="text-[10px] leading-tight font-[Calibri] mt-4 font-bold text-rose-700">Notes:</h4>
         <ul className="text-[10px] leading-tight font-[Calibri] text-rose-700 font-bold list-disc ml-5">
