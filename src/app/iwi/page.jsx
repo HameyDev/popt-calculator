@@ -37,29 +37,28 @@ export default function IWICalculator() {
 
 
   useEffect(() => {
-    let total = 0;
-    let insulated = 0;
-    let cavity = 0;
+  let total = 0;
+  let insulated = 0;
+  let cavity = 0;
 
-    walls.forEach((wall) => {
-      const area = Number(calculateArea(wall).toFixed(2));
-      total += area;
+  walls.forEach((wall) => {
+    const area = calculateArea(wall);
+    total += area;
 
-      if (wall.insulate === "Yes") insulated += area;
-      if (wall.cavity === "Yes") cavity += area;
-    });
+    if (wall.insulate === "Yes") insulated += area;
+    if (wall.cavity === "Yes") cavity += area;
+  });
 
-    const percent = total
+  setTotals({
+    totalWallArea: Number(total.toFixed(2)),
+    insulatedArea: Number(insulated.toFixed(2)),
+    cavityArea: Number(cavity.toFixed(2)),
+    percentInsulated: total
       ? Number(((insulated / total) * 100).toFixed(2))
-      : 0;
+      : 0,
+  });
+}, [walls]);
 
-    setTotals({
-      totalWallArea: total.toFixed(2),
-      insulatedArea: insulated.toFixed(2),
-      cavityArea: cavity.toFixed(2),
-      percentInsulated: percent,
-    });
-  }, [walls]);
 
 
   const handleChange = (index, field, value) => {
