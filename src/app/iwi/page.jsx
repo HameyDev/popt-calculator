@@ -26,11 +26,16 @@ export default function IWICalculator() {
   const reportRef = useRef();
 
   const calculateArea = (wall) => {
-    const area =
-      parseFloat(wall.length || 0) * parseFloat(wall.height || 0) -
-      parseFloat(wall.subtract || 0);
-    return area > 0 ? area : 0;
+  const length = Math.round((parseFloat(wall.length) || 0) * 100);
+  const height = Math.round((parseFloat(wall.height) || 0) * 100);
+  const subtract = Math.round((parseFloat(wall.subtract) || 0) * 100);
+
+  const areaInCm =
+    Math.round((length * height) / 100) - subtract;
+
+  return areaInCm > 0 ? areaInCm / 100 : 0;
   };
+
 
   useEffect(() => {
   let total = 0;
