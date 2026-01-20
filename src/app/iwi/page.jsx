@@ -244,11 +244,11 @@ export default function IWICalculator() {
         ref={reportRef}
         className="mt-10 bg-white p-6 rounded shadow overflow-x-auto text-[10px] leading-tight font-[Calibri] w-1/2"
       >
-        <h1 className="text-xl font-bold text-orange-600 mb-4">IWI</h1>
+        <h1 className="text-xl font-bold text-purple-600 mb-4">EWI</h1>
 
         <div className="flex items-center space-x-2">
-          <div className="w-12 h-1.5 bg-orange-500 rounded-full"></div>
-          <span className="text-orange-500 font-semibold">Insulated Wall</span>
+          <div className="w-12 h-1.5 bg-purple-500 rounded-full"></div>
+          <span className="text-purple-500 font-semibold">Insulated Wall</span>
         </div>
 
         <div className="flex items-center space-x-2">
@@ -256,54 +256,59 @@ export default function IWICalculator() {
           <span className="text-red-700 font-semibold">Not Insulated Wall</span>
         </div>
 
-        <p className="mt-4 font-semibold text-orange-500">GF = Ground Floor</p>
-        <p className="font-semibold text-orange-500 mb-4">FF = First Floor</p>
+        <p className="mt-4 font-semibold text-purple-500">GF = Ground Floor</p>
+        <p className="font-semibold text-purple-500 mb-4">FF = First Floor</p>
 
         {walls.map((wall, index) => (
           <p
             key={index}
             className={`${
               wall.insulate === "Yes"
-                ? "text-orange-500 font-semibold"
+                ? "text-purple-500 font-semibold"
                 : "text-rose-700 font-semibold"
             }`}
           >
-            {`${wall.location === "Main" ? "" : wall.location + " "} ${
-              wall.elevation
-            } ${wall.floor} IWI Area=(${wall.length}*${wall.height})-(${
-              wall.subtract
-            })=${calculateArea(wall).toFixed(2)}m²`}
+            {`${wall.location === "Main" ? "" : wall.location + " "} ${wall.elevation} ${wall.floor} EWI Area=(${wall.length}*${wall.height})-(${wall.subtract})=${calculateArea(wall).toFixed(2)}m²`}
           </p>
         ))}
 
-        <p className="mt-12 font-semibold text-orange-500">IWI</p>
-        <p className="mt-4 font-semibold text-orange-500">
+        <p className="mt-12 font-semibold text-purple-500">EWI</p>
+        <p className="mt-4 font-semibold text-purple-500">
           Total Wall Area={totals.totalWallArea}m²
         </p>
-        <p className="mt-4 font-semibold text-orange-500">
+        <p className="mt-4 font-semibold text-purple-500">
           Total Solid Wall Area={(totals.totalWallArea - totals.cavityArea).toFixed(2)}m²
         </p>
         {totals.cavityArea > 0 && (
-          <p className="mt-4 font-semibold text-orange-500">
-            Total Cavity Wall Area={totals.cavityArea}m²
-          </p>
+         <p className="mt-4 font-semibold text-purple-500">
+           Total Cavity Wall Area={totals.cavityArea}m²
+         </p>
         )}
-        <p className="mt-3 font-semibold text-orange-500 border-2 border-orange-500 px-2 pb-3 w-48">
-          Insulated IWI Solid Wall Area={totals.insulatedArea}m²
+        <p className="mt-3 font-semibold text-purple-500 border-2 border-purple-500 px-2 pb-3 w-48">
+          Insulated EWI Solid Wall Area={totals.insulatedArea}m²
         </p>
-        <p className="mt-3 font-semibold text-orange-500">
+        <p className="mt-3 font-semibold text-purple-500">
           %age Insulated={Math.floor(totals.percentInsulated)}%
         </p>
-        <p className="mt-3 font-semibold text-orange-500">
+        <p className="mt-3 font-semibold text-purple-500">
           Popt={Math.floor(totals.percentInsulated)}%
         </p>
-        <p className="mt-3 font-semibold text-orange-500">
+        <p className="mt-3 font-semibold text-purple-500">
           Measure Installed={Math.floor(totals.percentInsulated)}%
         </p>
-        <p className="mt-3 font-semibold text-orange-500">Solid Wall={totals.totalWallArea > 0 ? Math.floor(((totals.totalWallArea - totals.cavityArea) / totals.totalWallArea) * 100) : 0}%</p>
+        <p className="mt-3 font-semibold text-purple-500">Solid Wall={totals.totalWallArea > 0 ? Math.floor(((totals.totalWallArea - totals.cavityArea) / totals.totalWallArea) * 100): 0}%</p>
         {totals.cavityArea > 0 && (
-          <p className="mt-3 font-semibold text-orange-500">Cavity Wall={Math.floor((totals.cavityArea / totals.totalWallArea) * 100)}%</p>
+        <p className="mt-3 font-semibold text-purple-500">Cavity Wall={Math.floor((totals.cavityArea / totals.totalWallArea) * 100)}%</p>
         )}
+        <h4 className="text-[10px] leading-tight font-[Calibri] mt-4 font-bold text-rose-700">Notes:</h4>
+        <ul className="text-[10px] leading-tight font-[Calibri] text-rose-700 font-bold list-disc ml-5">
+          <li>Wet rooms are not to be insulated.</li>
+          <li>DMEV fan will be installed in Kitchen and Bathroom.</li>
+          <li>
+            Kitchen and Bathroom will have radiators and can be heated to a
+            minimum of 18°C.
+          </li>
+        </ul>
       </div>
 
       {/* Generate JPEG Button */}
